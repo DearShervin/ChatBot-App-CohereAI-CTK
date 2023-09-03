@@ -7,17 +7,17 @@ co = cohere.Client("APIKEY")
 class App():
     def __init__(self):
         self.root = ctk.CTk()
-        self.root.geometry("800x300")
-        self.root.title('Co:here API App')
+        self.root.geometry("900x400")
+        self.root.title('Chat App')
         self.mainframe = ctk.CTkFrame(master=self.root)
         self.mainframe.pack(pady=10, padx=10, fill='both', expand="True")
 
-        self.text = ctk.CTkLabel(master=self.mainframe, text="Ask Anything",
+        self.text = ctk.CTkLabel(master=self.mainframe, text="Input",
                                  text_color="White", font=("Calibri Light", 18))
         self.text.grid(row=0, column=0)
 
         self.text_field = ctk.CTkEntry(
-            master=self.mainframe, width=615, height=10)
+            master=self.mainframe, width=700, height=10)
         self.text_field.grid(row=1, column=0, pady=5, padx=5, sticky="NWES")
 
         self.text_button = ctk.CTkButton(
